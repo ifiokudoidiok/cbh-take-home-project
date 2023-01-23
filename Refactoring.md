@@ -12,6 +12,7 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 The initial code was hard to follow with different if blocks depending on one another.
 - The flow does not seem like the best way to go.
 - There were some repeated code. 
+- constants were kept in the same file making it difficult to read
 
 
 
