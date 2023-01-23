@@ -9,3 +9,30 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+The initial code was hard to follow with different if blocks depending on one another.
+The flow does not seem like the best way to go.
+
+
+
+
+
+
+Below is a breakdown of my refactoring:
+
+This code is a utility function used to generate a deterministic partition key for an event.
+ The partition key is used to determine which partition of a database an event should be written to.
+ A deterministic partition key is one that always produces the same output for a given input.
+
+
+The code first checks to see if the event has a partition key. 
+If so, it assigns the partition key to a candidate variable. 
+If not, it creates a hash of the event data and assigns that to the candidate variable.
+
+Next, it checks to see if the candidate is a string and, if not, it converts it to a string. 
+It then checks to see if the length of the candidate is greater than the maximum partition key length. 
+If so, it creates another hash of the candidate.
+
+Finally, it returns the candidate. 
+If the length of the candidate is greater than the maximum partition key length, 
+it returns the hash of the candidate. 
+Otherwise, it returns the candidate.
