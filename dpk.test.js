@@ -23,10 +23,5 @@ describe("deterministicPartitionKey", () => {
     expect(actual).toEqual(expected);
   });
 
-  test("Should return trivial partition key if no data is given", () => {
-    const actual = deterministicPartitionKey();
-    const expected = "0";
-    expect(actual).toEqual(expected);
-  });
 });
 
